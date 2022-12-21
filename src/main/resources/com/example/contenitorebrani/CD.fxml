@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.33969465648854963" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="928.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.example.contenitorebrani.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="445.0" style="-fx-background-color: #b0e0a4;">
+         <children>
+            <Button fx:id="addbrano" layoutX="65.0" layoutY="138.0" mnemonicParsing="false" onAction="#aggiungibrano" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: #52ffcb;" text="Aggiungi Brano" textAlignment="CENTER" textFill="#1c8c24">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="removebrano" disable="true" layoutX="65.0" layoutY="232.0" mnemonicParsing="false" onAction="#rimuovibrano" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: #de5050;" text="Rimuovi Brano" textFill="#40ed5d">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="editbrano" disable="true" layoutX="65.0" layoutY="318.0" mnemonicParsing="false" onAction="#modificabrano" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: #2e6ce8;" text="Modifica Brano" textFill="#63ffef">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="nomebranolabel" disable="true" layoutX="72.0" layoutY="35.0" opacity="0.0" style="-fx-background-color: #8ad8ff;" text="Inserisci Nome Brano">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomebranofield" disable="true" layoutX="82.0" layoutY="69.0" opacity="0.0" />
+            <Label fx:id="autorebranolabel" disable="true" layoutX="55.0" layoutY="125.0" opacity="0.0" style="-fx-background-color: #8ad8ff;" text="Inserisci Autore del Brano">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="autorebranofield" disable="true" layoutX="82.0" layoutY="157.0" opacity="0.0" />
+            <Label fx:id="duratabranolabel" disable="true" layoutX="56.0" layoutY="209.0" opacity="0.0" style="-fx-background-color: #8ad8ff;" text="Inserisci durata del Brano">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="duratabranofield" disable="true" layoutX="82.0" layoutY="251.0" opacity="0.0" />
+            <Label fx:id="numelencolabel" disable="true" layoutX="55.0" layoutY="290.0" opacity="0.0" style="-fx-background-color: #8ad8ff;" text="Inserisci numero d'elenco">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numelencofield" disable="true" layoutX="82.0" layoutY="337.0" opacity="0.0" />
+            <Button fx:id="confirmbutton" disable="true" layoutX="22.0" layoutY="462.0" mnemonicParsing="false" onAction="#Clicked" opacity="0.0" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: #c285ff;" text="Aggiungi">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="backbutton" disable="true" layoutX="163.0" layoutY="462.0" mnemonicParsing="false" onAction="#TornaIndietro" opacity="0.0" style="-fx-background-color: #d16d3f;" text="Torna Indietro">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="526.0" prefWidth="602.0">
+         <children>
+            <ListView fx:id="nomebranolista" fixedCellSize="21.0" layoutX="5.0" prefHeight="526.0" prefWidth="230.0" style="-fx-background-color: #ccd1cb;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ListView>
+            <Separator disable="true" layoutX="236.0" orientation="VERTICAL" prefHeight="526.0" prefWidth="8.0" />
+            <ListView fx:id="autorebranolista" fixedCellSize="21.0" layoutX="244.0" prefHeight="526.0" prefWidth="219.0" style="-fx-background-color: #ccd1cb;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ListView>
+            <Separator disable="true" layoutX="463.0" orientation="VERTICAL" prefHeight="526.0" prefWidth="8.0" />
+            <ListView fx:id="duratabranolista" fixedCellSize="21.0" layoutX="471.0" prefHeight="526.0" prefWidth="135.0" style="-fx-background-color: #ccd1cb;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ListView>
+         </children></AnchorPane>
+  </items>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</SplitPane>
