@@ -13,6 +13,7 @@ import java.util.Objects;
 
 public class Controller {
 
+
     //Utilizzo questa variable per identificare cosa dovrò fare con il tasto conferma
     static int flag = 4;
 

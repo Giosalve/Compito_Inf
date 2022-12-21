@@ -2,6 +2,7 @@ package com.example.contenitorebrani;
 
 public class Dvd {
 
+
     private String Traccia = " ";
     private String Autore = " ";
     private String DurataBr = " ";
