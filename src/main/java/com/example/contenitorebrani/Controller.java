@@ -346,12 +346,7 @@ public class Controller {
                         numelencofield.setText("");
                     } else{
 
-
-                        String delnums=numelencofield.getText();
-
-                        int delnumi =Integer.valueOf(delnums);
-
-                        DelBrano(delnumi);
+                        DelBrano(Integer.parseInt(numelencofield.getText()));
 
                         //Resetto la scritto dell'errore e la nascondo
                         nomebranolabel.setText(temp2);
